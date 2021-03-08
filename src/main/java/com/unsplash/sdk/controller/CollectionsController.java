@@ -3,11 +3,10 @@ package com.unsplash.sdk.controller;
 import com.unsplash.sdk.client.CollectionClient;
 import com.unsplash.sdk.dto.request.AddPhotoRequest;
 import com.unsplash.sdk.dto.request.CollectionRequest;
-import com.unsplash.sdk.dto.response.AddPhotoToCollectionResponse;
+import com.unsplash.sdk.dto.response.AddPhotoResponse;
 import com.unsplash.sdk.dto.response.CollectionResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import static com.unsplash.sdk.utils.Constants.ADD_PHOTO_TO_COLLECTION;
@@ -22,7 +21,7 @@ public class CollectionsController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(ADD_PHOTO_TO_COLLECTION)
-    public AddPhotoToCollectionResponse addPhotoToCollection(@Valid @RequestBody AddPhotoRequest addPhotoRequest) {
+    public AddPhotoResponse addPhotoToCollection(@Valid @RequestBody AddPhotoRequest addPhotoRequest) {
         return client.addPhoto(addPhotoRequest);
     }
 
@@ -31,7 +30,5 @@ public class CollectionsController {
     public CollectionResponse create(@Valid @RequestBody CollectionRequest request) {
         return client.create(request);
     }
-
-
 
 }

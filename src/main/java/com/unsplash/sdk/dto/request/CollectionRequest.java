@@ -1,6 +1,5 @@
 package com.unsplash.sdk.dto.request;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.unsplash.sdk.dto.base.Base;
 import lombok.Builder;
 import lombok.Data;

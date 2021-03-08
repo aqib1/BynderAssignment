@@ -2,8 +2,9 @@ package com.unsplash.sdk.client;
 
 import com.unsplash.sdk.dto.request.AddPhotoRequest;
 import com.unsplash.sdk.dto.request.CollectionRequest;
-import com.unsplash.sdk.dto.response.AddPhotoToCollectionResponse;
+import com.unsplash.sdk.dto.response.AddPhotoResponse;
 import com.unsplash.sdk.dto.response.CollectionResponse;
+import com.unsplash.sdk.exception.ErrorResponseException;
 import com.unsplash.sdk.utils.Helper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -32,15 +33,14 @@ public class CollectionClient {
         if (response.getStatusCode() == HttpStatus.CREATED) {
             return helper.jsonToObject(response.getBody(), CollectionResponse.class);
         }
-        return null;
+        throw new ErrorResponseException("Response not successful", response);
     }
 
-    public AddPhotoToCollectionResponse addPhoto(AddPhotoRequest request) {
+    public AddPhotoResponse addPhoto(AddPhotoRequest request) {
         ResponseEntity<String> response = restTemplate.postForEntity(addPhotoInCollectionUrl, helper.getHttpEntity(helper.asJsonString(request), BEARER_KEY, request.getAccessToken()), String.class, request.getCollectionId());
-
         if (response.getStatusCode() == HttpStatus.CREATED) {
-            return helper.jsonToObject(response.getBody(), AddPhotoToCollectionResponse.class);
+            return helper.jsonToObject(response.getBody(), AddPhotoResponse.class);
         }
-        return null;
+         throw new ErrorResponseException("Response not successful", response);
     }
 }

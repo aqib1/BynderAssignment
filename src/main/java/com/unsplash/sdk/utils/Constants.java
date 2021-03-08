@@ -1,7 +1,6 @@
 package com.unsplash.sdk.utils;
 
 public class Constants {
-
     public static final String AUTHORIZATION_KEY = "Authorization";
     public static final String BEARER_KEY = "Bearer";
     public static final String CLIENT_ID_KEY = "Client-ID";

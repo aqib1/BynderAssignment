@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Getter
 @Setter
-public class AddPhotoToCollectionResponse extends Base {
+public class AddPhotoResponse extends Base {
     private PhotoResponse photo;
     private CollectionResponse collection;
 }

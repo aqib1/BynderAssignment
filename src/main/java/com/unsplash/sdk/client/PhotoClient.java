@@ -1,6 +1,7 @@
 package com.unsplash.sdk.client;
 
 import com.unsplash.sdk.dto.response.PhotoResponse;
+import com.unsplash.sdk.exception.ErrorResponseException;
 import com.unsplash.sdk.utils.Helper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -37,7 +38,7 @@ public class PhotoClient {
         if (response.getStatusCode() == HttpStatus.OK) {
             return helper.jsonToObject(response.getBody(), PhotoResponse[].class);
         }
-        return null;
+        throw new ErrorResponseException("Response not successful", response);
     }
 
 

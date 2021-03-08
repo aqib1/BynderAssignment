@@ -2,7 +2,6 @@ package com.unsplash.sdk.dto.response;
 
 import com.unsplash.sdk.dto.base.Base;
 import lombok.*;
-
 import java.util.Collection;
 
 @Builder
