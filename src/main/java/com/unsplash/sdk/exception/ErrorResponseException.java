@@ -2,18 +2,19 @@ package com.unsplash.sdk.exception;
 
 import org.springframework.http.ResponseEntity;
 
+import java.io.Serial;
+
 public class ErrorResponseException extends RuntimeException {
 
     private ResponseEntity<String> response;
     /**
      *
      */
+    @Serial
     private static final long serialVersionUID = 2809306975311109014L;
 
 
-    /**
-     * @param message
-     */
+
     public ErrorResponseException(String message) {
         super(message);
     }

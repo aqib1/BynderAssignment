@@ -7,9 +7,13 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import java.util.List;
+import java.util.Random;
+
 import static com.unsplash.sdk.utils.Constants.AUTHORIZATION_KEY;
 
 public class Helper {
+
+    private final Random random = new Random(Integer.MAX_VALUE);
 
     private final ObjectMapper objectMapper = new ObjectMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
@@ -19,13 +23,8 @@ public class Helper {
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.put(AUTHORIZATION_KEY, List.of(placeholder.concat(" ")
                 .concat(accessToken)));
-        return new HttpEntity(jsonBody, headers);
+        return new HttpEntity<>(jsonBody, headers);
     }
-
-    public HttpEntity<String> getHttpEntity(String placeholder, String accessToken) {
-       return getHttpEntity(null, placeholder, accessToken);
-    }
-
 
     public String asJsonString(final Object obj) {
         try {
@@ -41,6 +40,10 @@ public class Helper {
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Random getRandom() {
+        return random;
     }
 
     /**

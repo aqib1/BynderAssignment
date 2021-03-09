@@ -27,5 +27,5 @@ public class PhotoResponse extends Base {
     private boolean likedByUser;
     @JsonProperty("current_user_collections")
     private List<UserCollectionResponse> userCollectionResponse;
-
+    private UserResponse user;
 }

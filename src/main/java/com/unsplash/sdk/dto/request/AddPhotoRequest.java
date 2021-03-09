@@ -2,12 +2,14 @@ package com.unsplash.sdk.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.unsplash.sdk.dto.base.Base;
-import lombok.Builder;
-import lombok.Data;
-
+import lombok.*;
 import javax.validation.constraints.NotNull;
-@Data
+
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class AddPhotoRequest extends Base {
     @NotNull(message = "Access token required for connection")
     private String accessToken;
