@@ -31,7 +31,7 @@ public class PhotoController {
     @GetMapping
     @ApiOperation(value = "Get all photos", response = PhotoResponse[].class)
     public PhotoResponse[] getAll(@Valid PhotoRequest request) {
-        logger.debug("Request received : ", request);
+        logger.debug("Request received : {}", request);
         return photoClient.getAll(request);
     }
 
@@ -39,7 +39,7 @@ public class PhotoController {
     @GetMapping(PHOTOS_RANDOM)
     @ApiOperation(value = "Get a random photo", response = PhotoResponse.class)
     public PhotoResponse random(@Valid RandomPhotoRequest request) {
-        logger.debug("Request received : ", request);
+        logger.debug("Request received : {}", request);
         return photoClient.random(request);
     }
 
@@ -47,7 +47,7 @@ public class PhotoController {
     @PostMapping(PHOTOS_LIKE)
     @ApiOperation(value = "Like a photo", response = LikePhotoResponse.class)
     public LikePhotoResponse like(@Valid @RequestBody LikePhotoRequest request) {
-        logger.debug("Request received : ", request);
+        logger.debug("Request received : {}", request);
         return photoClient.like(request);
     }
 }

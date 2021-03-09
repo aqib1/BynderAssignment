@@ -30,7 +30,7 @@ public class CollectionController {
     @PostMapping(ADD_PHOTO_TO_COLLECTION)
     @ApiOperation(value = "Add photo to collection", response = AddPhotoResponse.class)
     public AddPhotoResponse addPhotoToCollection(@Valid @RequestBody AddPhotoRequest addPhotoRequest) {
-        logger.debug("Request received : ", addPhotoRequest);
+        logger.debug("Request received : {}", addPhotoRequest);
         return client.addPhotoToCollection(addPhotoRequest);
     }
 
@@ -38,7 +38,7 @@ public class CollectionController {
     @PostMapping
     @ApiOperation(value = "Create a new collection", response = CollectionResponse.class)
     public CollectionResponse create(@Valid @RequestBody CollectionRequest request) {
-        logger.debug("Request received : ", request);
+        logger.debug("Request received : {}", request);
         return client.create(request);
     }
 

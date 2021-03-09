@@ -36,7 +36,7 @@ public class CollectionClient {
     public CollectionResponse create(CollectionRequest request) {
         ResponseEntity<String> response = restTemplate.postForEntity(collectionUrl, helper.getHttpEntity(helper.asJsonString(request), BEARER_KEY, request.getAccessToken()), String.class);
         if (response.getStatusCode() == HttpStatus.CREATED) {
-            logger.debug("Response received successfully : ", response);
+            logger.debug("Response received successfully : {}", response);
             return helper.jsonToObject(response.getBody(), CollectionResponse.class);
         }
         throw new ErrorResponseException("Response not successful", response);
@@ -48,7 +48,7 @@ public class CollectionClient {
                 String.class,
                 request.getCollectionId());
         if (response.getStatusCode() == HttpStatus.CREATED) {
-            logger.debug("Response received successfully : ", response);
+            logger.debug("Response received successfully : {}", response);
             return helper.jsonToObject(response.getBody(), AddPhotoResponse.class);
         }
         throw new ErrorResponseException("Response not successful", response);

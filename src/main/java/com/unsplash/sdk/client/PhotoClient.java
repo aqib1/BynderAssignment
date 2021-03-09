@@ -43,7 +43,7 @@ public class PhotoClient {
                 String.class);
 
         if (response.getStatusCode() == HttpStatus.OK) {
-            logger.debug("Response received successfully : ", response);
+            logger.debug("Response received successfully : {}", response);
             return helper.jsonToObject(response.getBody(), PhotoResponse[].class);
         }
         throw new ErrorResponseException("Response not successful", response);
@@ -55,7 +55,7 @@ public class PhotoClient {
                 helper.getHttpEntity(helper.asJsonString(request), BEARER_KEY, request.getAccessToken()),
                 String.class);
         if (response.getStatusCode() == HttpStatus.OK) {
-            logger.debug("Response received successfully : ", response);
+            logger.debug("Response received successfully : {}", response);
             return helper.jsonToObject(response.getBody(), PhotoResponse.class);
         }
         throw new ErrorResponseException("Response not successful", response);
@@ -68,7 +68,7 @@ public class PhotoClient {
                 String.class,
                 request.getPhotoId());
         if (response.getStatusCode() == HttpStatus.CREATED) {
-            logger.debug("Response received successfully : ", response);
+            logger.debug("Response received successfully : {}", response);
             return helper.jsonToObject(response.getBody(), LikePhotoResponse.class);
         }
         throw new ErrorResponseException("Response not successful", response);
