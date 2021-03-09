@@ -33,3 +33,6 @@ mvn clean install
 
 ### Build And Test
 mvn clean test
+
+### Swagger URL
+please see the link for detail of all APIs http://localhost:8080/swagger-ui/#/
