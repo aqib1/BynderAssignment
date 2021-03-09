@@ -10,13 +10,16 @@ C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\dto\respon
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\dto\response\AllPhotosResponse.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\dto\response\PhotoResponse.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\dto\request\CollectionRequest.java
+C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\logging\LoggingAspect.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\utils\Helper.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\dto\request\RandomPhotoRequest.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\exception\ErrorResponseException.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\client\CollectionClient.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\controller\PhotoController.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\utils\Constants.java
+C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\dto\response\LikePhotoResponse.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\dto\response\LinksResponse.java
+C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\dto\request\LikePhotoRequest.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\dto\response\AddPhotoResponse.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\client\PhotoClient.java
 C:\Users\Aqib\Desktop\BynderAssignment\src\main\java\com\unsplash\sdk\controller\CollectionController.java

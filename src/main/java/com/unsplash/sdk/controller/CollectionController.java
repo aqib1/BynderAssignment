@@ -5,6 +5,7 @@ import com.unsplash.sdk.dto.request.AddPhotoRequest;
 import com.unsplash.sdk.dto.request.CollectionRequest;
 import com.unsplash.sdk.dto.response.AddPhotoResponse;
 import com.unsplash.sdk.dto.response.CollectionResponse;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,7 @@ public class CollectionController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(ADD_PHOTO_TO_COLLECTION)
+    @ApiOperation(value = "Add photo to collection", response = AddPhotoResponse.class)
     public AddPhotoResponse addPhotoToCollection(@Valid @RequestBody AddPhotoRequest addPhotoRequest) {
         logger.debug("Request received : ", addPhotoRequest);
         return client.addPhotoToCollection(addPhotoRequest);
@@ -34,6 +36,7 @@ public class CollectionController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
+    @ApiOperation(value = "Create a new collection", response = CollectionResponse.class)
     public CollectionResponse create(@Valid @RequestBody CollectionRequest request) {
         logger.debug("Request received : ", request);
         return client.create(request);
