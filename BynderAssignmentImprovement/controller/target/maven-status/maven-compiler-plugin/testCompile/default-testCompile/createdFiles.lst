@@ -1,0 +1,6 @@
+com\unsplash\main\unit\advice\ExceptionAdviceUnit.class
+com\unsplash\main\integeration\PhotoControllerIT.class
+com\unsplash\main\unit\CollectionControllerUnit.class
+com\unsplash\main\unit\PhotoControllerUnit.class
+com\unsplash\main\BynderServerApplicationUnitTest.class
+com\unsplash\main\integeration\CollectionControllerIT.class

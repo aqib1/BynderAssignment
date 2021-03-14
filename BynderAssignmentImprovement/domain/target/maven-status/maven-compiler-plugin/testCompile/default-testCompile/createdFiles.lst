@@ -1,0 +1,16 @@
+com\unsplash\domain\exceptions\ErrorResponseExceptionUnitTest.class
+com\unsplash\domain\request\PhotoRequestUnitTest.class
+com\unsplash\domain\response\PhotoResponseUnitTest.class
+com\unsplash\domain\request\CollectionRequestUnitTest.class
+com\unsplash\domain\response\CollectionResponseUnitTest.class
+com\unsplash\domain\response\AllPhotosResponseUnitTest.class
+com\unsplash\domain\response\UserResponseUnitTest.class
+com\unsplash\domain\response\UserCollectionResponseUnitTest.class
+com\unsplash\domain\response\LinksResponseUnitTest.class
+com\unsplash\domain\request\AddPhotoRequestUnitTest.class
+com\unsplash\domain\base\BaseUnitTest.class
+com\unsplash\domain\response\ResponseErrorUnitTest.class
+com\unsplash\domain\response\PhotoUrlResponseUnitTest.class
+com\unsplash\domain\response\UserProfileImageResponseUnitTest.class
+com\unsplash\domain\response\AddPhotoResponseUnitTest.class
+com\unsplash\domain\request\RandomPhotoRequestUnitTest.class

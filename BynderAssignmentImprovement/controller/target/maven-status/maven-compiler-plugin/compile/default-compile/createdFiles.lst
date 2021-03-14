@@ -1,0 +1,4 @@
+com\unsplash\main\controller\PhotoController.class
+com\unsplash\main\controller\advice\ExceptionAdvice.class
+com\unsplash\main\BynderServerApplication.class
+com\unsplash\main\controller\CollectionController.class

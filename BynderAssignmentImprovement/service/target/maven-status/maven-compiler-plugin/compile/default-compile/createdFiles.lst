@@ -1,0 +1,3 @@
+com\unsplash\service\client\PhotoClient.class
+com\unsplash\service\client\CollectionClient.class
+com\unsplash\service\config\RestTemplateConfig.class

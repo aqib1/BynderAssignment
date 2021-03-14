@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>unsplash-main</artifactId>
+        <groupId>com.unsplash.org</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>controller</artifactId>
+    <properties>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+        <usplash.service.version>1.0-SNAPSHOT</usplash.service.version>
+        <usplash.domain.version>1.0-SNAPSHOT</usplash.domain.version>
+        <springfox.version>3.0.0</springfox.version>
+        <usplash.utilities.version>1.0-SNAPSHOT</usplash.utilities.version>
+        <aop.version>1.0-SNAPSHOT</aop.version>
+        <unsplash.config>1.0-SNAPSHOT</unsplash.config>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.unsplash.org</groupId>
+            <artifactId>config</artifactId>
+            <version>${unsplash.config}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.unsplash.org</groupId>
+            <artifactId>service</artifactId>
+            <version>${usplash.service.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.unsplash.org</groupId>
+            <artifactId>domain</artifactId>
+            <version>${usplash.domain.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${springfox.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.unsplash.org</groupId>
+            <artifactId>utilities</artifactId>
+            <version>${usplash.utilities.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.unsplash.org</groupId>
+            <artifactId>aop</artifactId>
+            <version>${aop.version}</version>
+        </dependency>
+    </dependencies>
+</project>

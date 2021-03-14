@@ -1,2 +1,2 @@
 docker build -t byndercontainer .
-docker run -p8080:8080 byndercontainer
+docker run -p8081:8080 byndercontainer
